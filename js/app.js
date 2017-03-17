@@ -47,7 +47,7 @@ $(document).ready(function(){
        shouldNeckSq = nciObj.shouldNeck-0;
        sqInNci = 28/headChinSq;
        console.log(sqInNci);
-       shouldWidthInNci = shouldNeckSq * sqInNci;
+       shouldWidthInNci = (shouldNeckSq * sqInNci).toFixed(2);
        console.log(shouldWidthInNci);
 
        nciScore = nciScoreFn(shouldWidthInNci);
