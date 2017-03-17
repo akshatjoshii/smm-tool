@@ -43,10 +43,12 @@ $(document).ready(function(){
            nciObj[formArr[i].name] = formArr[i].value;
        });
        console.log(nciObj);
-       headChinSq = nciObj.chinHead;
-       shouldNeckSq = nciObj.shouldNeck;
+       headChinSq = nciObj.chinHead-0;
+       shouldNeckSq = nciObj.shouldNeck-0;
        sqInNci = 28/headChinSq;
-       shouldWidthInNci = shouldNeckSq * shouldNeckSq;
+       console.log(sqInNci);
+       shouldWidthInNci = shouldNeckSq * sqInNci;
+       console.log(shouldWidthInNci);
 
        nciScore = nciScoreFn(shouldWidthInNci);
        $('.score.alert').show();
