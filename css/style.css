@@ -1,0 +1,31 @@
+.logo{
+    width:150px;
+}
+.header{
+    border-bottom: 1px solid #e5e3e3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 1px #f8f8f8;
+    background: #fcfcfc;
+}
+.thumbnail{
+    margin:0 auto;
+}
+.margin-top-30{
+    margin-top:30px;
+}
+#uploadBtn{
+    position:relative;
+}
+#uploadPic{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0;
+    max-width: 100%;
+}
+.full-width{
+    max-width:100%;
+}
