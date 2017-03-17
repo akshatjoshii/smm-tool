@@ -4,7 +4,7 @@
 
 
 
-function nciCount($nci){
+function nciScoreFn($nci){
     if($nci < 13){
         return '2';
     }
@@ -33,6 +33,7 @@ $(document).ready(function(){
     var nci;
     var nciScore;
     var imgInput = document.getElementById('uploadPic');
+    $('.score.alert').hide();
 
    $('#nciForm').submit(function (e) {
         e.preventDefault();
@@ -47,7 +48,9 @@ $(document).ready(function(){
        sqInNci = 28/headChinSq;
        shouldWidthInNci = shouldNeckSq * shouldNeckSq;
 
-       nciScore = nciCount();
+       nciScore = nciScoreFn(shouldWidthInNci);
+       $('.score.alert').show();
+       $('.score.alert').html('Should Width in Nci = '+shouldWidthInNci+' , NCi Score ='+ nciScore)
    });
 
 
@@ -68,6 +71,8 @@ $(document).ready(function(){
 
   $('#resetPic').click(function (e) {
       $('#nciForm')[0].reset();
+      $('.score.alert').hide();
+      $('.thumbnail').attr('src', './img/demo.jpg');
   })
 
 
